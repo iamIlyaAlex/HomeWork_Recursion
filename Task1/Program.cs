@@ -11,21 +11,18 @@ class Program
         int N = int.Parse(Console.ReadLine()!);
 
         Console.WriteLine("Натуральные числа от M до N:");
-        Console.Write("\"");
-        PrintNumbers(M, N);
-        Console.Write("\"");
+        Console.Write('\"' + PrintNumbers(M, N) + '\"');
     }
 
-    static void PrintNumbers(int M, int N)
+    static string PrintNumbers(int start, int end)
     {
-        if (M <= N)
+        string numbers = start.ToString();
+
+        if (start != end)
         {
-            Console.Write($"{M}");
-
-            if (M != N)
-                Console.Write(", ");
-
-            PrintNumbers(M + 1, N);
+            numbers += ", " + PrintNumbers(start + 1, end);
         }
+
+        return numbers;
     }
 }
