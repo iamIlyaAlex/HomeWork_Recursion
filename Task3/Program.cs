@@ -17,10 +17,10 @@ class Program
 
     static void Main(string[] args)
     {
-        int[] arr = { 11, 22, 13, 14, 35 };
+        int[] arr = {11, 22, 13, 14, 35};
         
-        Console.Write("Массив: [");
+        Console.Write("Массив: ");
         PrintArrayReverse(arr, arr.Length - 1);
-        Console.WriteLine("]");
+        Console.WriteLine("");
     }
 }
