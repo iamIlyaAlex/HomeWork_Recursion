@@ -20,8 +20,8 @@ class Program
 
     static void Main(string[] args)
     {
-        int m = 3;
-        int n = 4;
+        int m = 2;
+        int n = 3;
         int result = Ackermann(m, n);
         Console.WriteLine("Результат функции Аккермана для m = {0} и n = {1} равен {2}", m, n, result);
     }
