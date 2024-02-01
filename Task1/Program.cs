@@ -5,22 +5,27 @@ class Program
     static void Main()
     {
         Console.Write("Введите значение M: ");
-        int m = int.Parse(Console.ReadLine()!);
+        int M = int.Parse(Console.ReadLine()!);
 
         Console.Write("Введите значение N: ");
-        int n = int.Parse(Console.ReadLine()!);
+        int N = int.Parse(Console.ReadLine()!);
 
-        PrintNumbersInRange(m, n);
-
-        Console.ReadLine();
+        Console.WriteLine("Натуральные числа от M до N:");
+        Console.Write("\"");
+        PrintNumbers(M, N);
+        Console.Write("\"");
     }
 
-    static void PrintNumbersInRange(int m, int n)
+    static void PrintNumbers(int M, int N)
     {
-        if (m <= n)
+        if (M <= N)
         {
-            Console.WriteLine(m);
-            PrintNumbersInRange(m + 1, n);
+            Console.Write($"{M}");
+
+            if (M != N)
+                Console.Write(", ");
+
+            PrintNumbers(M + 1, N);
         }
     }
 }
